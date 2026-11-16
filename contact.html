@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Alaska Real Estate King</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#12303B;--dusk:#2F5D6E;--glacier:#D3E5EC;--snow:#F6F9FA;--rose:#B93A62;--line:#B9CFD8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--snow);color:var(--ink);font:400 18px/1.55 "Source Sans 3",system-ui,sans-serif}
+.ridge{display:block;width:100%;height:auto;max-height:240px;background:var(--glacier)}
+header{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;padding:20px 24px}
+.brand{font:700 20px "Bricolage Grotesque",sans-serif;letter-spacing:-.01em}
+header a{color:var(--dusk);font-weight:600;text-decoration:none}
+header a:hover{text-decoration:underline}
+main{max-width:1100px;margin:-60px auto 64px;padding:0 24px;display:grid;grid-template-columns:5fr 6fr;gap:48px;align-items:start}
+.intro{padding-top:80px}
+h1{font:700 clamp(36px,5vw,56px)/1.05 "Bricolage Grotesque",sans-serif;letter-spacing:-.02em;margin:0 0 20px}
+.intro p{max-width:34ch;color:var(--dusk);margin:0 0 16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:32px;box-shadow:0 18px 40px -24px rgba(18,48,59,.35)}
+.card h2{font:600 24px "Bricolage Grotesque",sans-serif;margin:0 0 20px}
+.field{margin-bottom:18px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label,legend{display:block;font-weight:600;margin-bottom:6px;padding:0}
+.opt{font-weight:400;color:var(--dusk)}
+input[type=text],input[type=email],input[type=tel],textarea{width:100%;font:inherit;color:inherit;background:var(--snow);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+textarea{min-height:130px;resize:vertical}
+input:focus-visible,textarea:focus-visible,button:focus-visible,.chip input:focus-visible+span{outline:3px solid var(--rose);outline-offset:2px}
+fieldset{border:0;margin:0 0 18px;padding:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip input{position:absolute;opacity:0}
+.chip span{display:inline-block;padding:9px 18px;border:1px solid var(--line);border-radius:999px;background:var(--snow);cursor:pointer;font-weight:600}
+.chip input:checked+span{background:var(--ink);border-color:var(--ink);color:#fff}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:16px;color:var(--dusk);margin-bottom:22px}
+.consent input{margin-top:5px;accent-color:var(--rose)}
+button{width:100%;font:700 18px "Bricolage Grotesque",sans-serif;background:var(--rose);color:#fff;border:0;border-radius:10px;padding:15px;cursor:pointer}
+button:hover{background:#9f2f52}
+button[disabled]{opacity:.6;cursor:wait}
+.hp{position:absolute;left:-9999px}
+#status{margin:14px 0 0;min-height:1.5em;color:var(--rose);font-weight:600}
+.done{text-align:left}
+.done h2{margin-bottom:10px}
+@media (max-width:820px){main{grid-template-columns:1fr;gap:8px;margin-top:-30px}.intro{padding-top:40px}.two{grid-template-columns:1fr}.card{padding:24px}}
+@media (prefers-reduced-motion:no-preference){button{transition:background .15s}}
+</style>
+</head>
+<body>
+<header>
+  <span class="brand">Alaska Real Estate King</span>
+  <a href="#listings">Live listings and market stats</a>
+</header>
+
+<svg class="ridge" viewBox="0 0 1200 240" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Chugach mountain ridgeline above Anchorage">
+  <path d="M0 240V150l90-60 70 40 110-100 90 90 80-50 130 120 100-80 90 50 120-110 110 100 100-70 110 90V240Z" fill="#9DBFCC"/>
+  <path d="M0 240V190l120-50 90 40 130-70 110 70 90-40 140 80 120-60 110 40 130-70 160 90V240Z" fill="#2F5D6E"/>
+  <path d="M0 240V215l160-30 140 25 150-35 170 30 160-25 140 30 140-20 140 25V240Z" fill="#12303B"/>
+</svg>
+
+<main>
+  <section class="intro">
+    <h1>Tell us where you want to be in Anchorage.</h1>
+    <p>Buying, selling, or still watching the market? Send a few details and we'll reply by email with next steps.</p>
+    <p id="listings">Want to look around first? Our site shows every current listing and the latest market stats.</p>
+  </section>
+
+  <section class="card" aria-labelledby="form-title">
+    <div id="formWrap">
+      <h2 id="form-title">Send us your inquiry</h2>
+      <form id="contactForm" novalidate>
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="two">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone <span class="opt">(optional)</span></label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+
+        <fieldset>
+          <legend>I'm looking to</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="interest" value="Buy" required><span>Buy a home</span></label>
+            <label class="chip"><input type="radio" name="interest" value="Sell"><span>Sell my home</span></label>
+            <label class="chip"><input type="radio" name="interest" value="Buy and sell"><span>Buy and sell</span></label>
+            <label class="chip"><input type="radio" name="interest" value="Not sure yet"><span>Not sure yet</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="budget">Budget or home value <span class="opt">(optional)</span></label>
+          <input type="text" id="budget" name="budget" placeholder="For example, around $450,000">
+        </div>
+
+        <div class="field">
+          <label for="message">How can we help?</label>
+          <textarea id="message" name="message" required placeholder="Tell us about the area, timing, and anything that matters to you."></textarea>
+        </div>
+
+        <label class="consent"><input type="checkbox" id="consent" required>
+          <span>I agree to be contacted by email about my inquiry.</span></label>
+
+        <button type="submit" id="send">Send my inquiry</button>
+        <p id="status" role="alert" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<script>
+// 1. Get a free access key at https://web3forms.com (enter the inbox that n8n watches) and paste it here.
+const ACCESS_KEY = "956dcdb7-2e9e-4db3-9328-082fe0cd1e59";
+// 2. The subject below contains "contact" and "inquiry", which the n8n Gmail trigger searches for.
+const SUBJECT = "New contact form inquiry from Alaska Real Estate King";
+
+const form = document.getElementById("contactForm");
+const statusEl = document.getElementById("status");
+const sendBtn = document.getElementById("send");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  statusEl.textContent = "";
+
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+  if (ACCESS_KEY === "YOUR_WEB3FORMS_ACCESS_KEY") {
+    statusEl.textContent = "This form is not connected yet. Add your Web3Forms access key in the page script.";
+    return;
+  }
+
+  const data = new FormData(form);
+  data.append("access_key", ACCESS_KEY);
+  data.append("subject", SUBJECT);
+  data.append("from_name", "Alaska Real Estate King website");
+
+  sendBtn.disabled = true;
+  sendBtn.textContent = "Sending";
+
+  try {
+    const res = await fetch("https://api.web3forms.com/submit", { method: "POST", body: data });
+    const json = await res.json();
+    if (!json.success) throw new Error(json.message || "Request failed");
+
+    const first = (data.get("name") || "").toString().trim().split(" ")[0];
+    document.getElementById("formWrap").innerHTML =
+      '<div class="done"><h2></h2><p>We received your inquiry and will reply to your email shortly. Check your spam folder if you do not see it.</p></div>';
+    document.querySelector(".done h2").textContent = "Thanks, " + (first || "we got it") + ".";
+  } catch (err) {
+    statusEl.textContent = "Your message was not sent. Check your connection and try again.";
+    sendBtn.disabled = false;
+    sendBtn.textContent = "Send my inquiry";
+  }
+});
+</script>
+</body>
+</html>
